@@ -5,9 +5,11 @@ class SiteCategorySerializer < BasicCategorySerializer
              :allowed_tag_groups,
              :allow_global_tags,
              :read_only_banner,
-             :form_template_ids
+             :form_template_ids,
+             :has_more_subcategories
 
   has_many :category_required_tag_groups, key: :required_tag_groups, embed: :objects
+  has_many :subcategories, embed: :objects, serializer: self.class
 
   def form_template_ids
     object.form_template_ids.sort

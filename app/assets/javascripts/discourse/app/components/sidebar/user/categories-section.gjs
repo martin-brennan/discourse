@@ -8,7 +8,7 @@ import Category from "discourse/models/category";
 import { i18n } from "discourse-i18n";
 import AllCategoriesSectionLink from "../common/all-categories-section-link";
 import CommonCategoriesSection from "../common/categories-section";
-import EditNavigationMenuCategoriesModal from "../edit-navigation-menu/categories-modal";
+import NewSidebarEditNavigationMenuCategoriesModal from "../edit-navigation-menu/new-categories-modal";
 import Section from "../section";
 import SectionLink from "../section-link";
 
@@ -68,7 +68,7 @@ export default class SidebarUserCategoriesSection extends CommonCategoriesSectio
 
   @action
   showModal() {
-    this.modal.show(EditNavigationMenuCategoriesModal);
+    this.modal.show(NewSidebarEditNavigationMenuCategoriesModal);
   }
 
   <template>
